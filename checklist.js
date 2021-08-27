@@ -48,6 +48,7 @@ console.log(books(20, 25));
 
 //৪.৫. [এক্সট্রা আরেকটা হোম ওয়ার্ক। এইটা ভিডিওতে বলা নাই]: জাভাস্ক্রিপ্ট এর var, let, const এর মধ্যে প্রার্থক্য কি?
 
+
 // ৫. অনেকগুলা সংখ্যার একটা array হবে। তারপর তোমার কাজ হবে array এর উপরে map ইউজ করে। প্রত্যেকটা উপাদানকে ৫ দিয়ে গুন্ করে গুনফল আরেকটা array হিসেবে রাখবে। পুরা কাজটা এক লাইনে হবে।
 
 const numbers = [12, 24, 67, 90, 56, 80, 35, 55]
@@ -91,7 +92,13 @@ console.log(age6);
 console.log(profession6);
 
 // ৯. [চ্যালেঞ্জিং] array এর destructuring করবে  আর সেটা করার জন্য তুমি এরে এর থার্ড পজিশন এর উপাদান কে destructuring করে 'three' নামক একটা ভেরিয়েবল এ রাখবে।
-
+const user ={
+    id: 339, 
+    name: 'shakib',
+    age: 34,
+};
+const {age: three}=user;
+console.log(three) // : diye new variable declare korte pari 
 
 /// ১০. তিনটা প্যারামিটার ওয়ালা একটা ফাংশন লিখবে। যেই ফাংশনের কাজ হবে তিনটা প্যারামিটার নিয়ে সেই তিনটা প্যারামিটার এর যোগ করে  যোগফল রিটার্ন করবে। আর থার্ড প্যারামিটার এর একটা ডিফল্ট ভ্যালু থাকবে। সেটা হবে ৭।
 
@@ -107,14 +114,19 @@ console.log(name(10, 20))
 
 //১১. একটা nested অবজেক্ট ডিক্লেয়ার করো (অর্থাৎ একটা অবজেক্ট এর প্রপার্টি এর মধ্যেও যে  অবজেক্ট থাকতে পারে। আবার সেই অবজেক্ট এর প্রপার্টি এর মধ্যেও যে অবজেক্ট থাকতে পারে। সেই রকম একটা অবজেক্ট ডিক্লেয়ার করো। এবং যেকোন একটা প্রপার্টি এর মান একটা array হবে। জাস্ট এমন একটা অবজেক্ট )
 
-const Bangladesh = {
-    Country: 'Bangladesh', Flag: " red and green", Languge: {
-        Bangla: '30k people', English: '5k people', Hindi: '2k people'
-    }, Dress: {
+const bangladesh = {
+    country: 'Bangladesh',
+    flag: " red and green", 
+    languge:{
+        bangla: '30k people', english: '5k people', hindi: '2k people'
+    }, 
+
+    dress: {
         male: 'luggi', female: 'sarii'
-    },
+    }
 }
-console.log(Bangladesh)
+const {hindi, bangla}= bangladesh.languge
+console.log(hindi, bangla)
 
 //১২. উপরের অবজেক্ট এ ডট এর আগে যে প্রশ্নবোধক চিহ্ন দিয়ে যে অপশনাল চেইনিং করা যায়। সেটা একটু প্রাকটিস করো।
 
